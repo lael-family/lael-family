@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 <template>
   <div class="main__academy relative w-full h-max overflow-hidden flex flex-col justify-between">
     <div class="pl-8 pt-8">
-      <h1 class="text-6xl">Faith Academy</h1>
+      <h1 class="text-6xl pb-2">Faith Academy</h1>
       <p class="text-xl font-[400]">
         Building the foundations of your faith in Christ. No assumptions. Using only the Bible as
         the source of truth.
