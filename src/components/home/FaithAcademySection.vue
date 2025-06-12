@@ -45,7 +45,7 @@ import { Button } from '../ui/button'
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/academy.jpg') no-repeat center center;
+  background: url('/img/academy.jpg') no-repeat center center;
   background-size: cover;
   opacity: 0.35;
   z-index: -1;
