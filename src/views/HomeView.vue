@@ -6,6 +6,8 @@ import PrayerBoardSection from '@/components/home/PrayerBoardSection.vue'
 
 <template>
   <HeroSection />
-  <PrayerBoardSection />
+  <div class="p-7">
+    <PrayerBoardSection />
+  </div>
   <FaithAcademySection />
 </template>
