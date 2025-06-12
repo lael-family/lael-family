@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import Card from '../ui/card/Card.vue'
-import CardContent from '../ui/card/CardContent.vue'
-
 const books = [
   {
     title: 'The Power of Right Believing',
@@ -46,19 +43,19 @@ const books = [
     </RouterLink>
   </div>
   <div class="grid grid-cols-6 py-4 gap-4">
-    <Card
+    <div
       v-for="book in books"
       :key="book.title"
       :class="[
-        `bg-[url(${book.cover})]`,
         'transition delay-100 duration-300 ease-in-out hover:shadow-2xl cursor-pointer',
-        'bg-cover h-96 w-64',
+        'bg-cover h-96 w-64 rounded-lg',
       ]"
+      :style="`background-image: url(${book.cover})`"
     >
-      <CardContent class="pt-64 px-2">
+      <div class="pt-64 px-2">
         <p class="font-semibold">{{ book.title }}</p>
         <p class="text-sm">{{ book.subtitle }}</p>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   </div>
 </template>

@@ -3,6 +3,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { BookOpen, Moon, Sun, Sunrise } from 'lucide-vue-next'
 import Separator from '../ui/separator/Separator.vue'
 
+function getBgColor(color: string): string {
+  return 'bg-' + color + '-100'
+}
+
+function getTxtColor(color: string): string {
+  return 'text-' + color + '-500'
+}
+
 const prayers = [
   {
     topic: 'sample prayer topic',
@@ -61,10 +69,10 @@ const prayers = [
         <div
           :class="[
             'w-15 h-15 rounded-4xl flex items-center justify-center',
-            `bg-${prayer.color}-100`,
+            getBgColor(prayer.color),
           ]"
         >
-          <component :is="prayer.icon" :class="[`text-${prayer.color}-500`]"></component>
+          <component :is="prayer.icon" :class="getTxtColor(prayer.color)"></component>
         </div>
         <CardTitle class="">{{ prayer.topic }}</CardTitle>
       </CardHeader>
