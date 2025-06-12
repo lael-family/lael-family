@@ -9,32 +9,32 @@ const prayers = [
     prayer_point: 'sample prayer point',
     verses: ['verse 1', 'verse 2'],
     icon: Sun,
-    textColor: 'text-amber-500',
-    bgColor: 'bg-amber-100',
+    date: 'June 6, 2025',
+    color: 'amber',
   },
   {
     topic: 'sample prayer topic',
     prayer_point: 'sample prayer point',
     verses: ['verse 1', 'verse 2'],
     icon: Sunrise,
-    textColor: 'text-red-500',
-    bgColor: 'bg-red-100',
+    date: 'June 6, 2025',
+    color: 'red',
   },
   {
     topic: 'sample prayer topic',
     prayer_point: 'sample prayer point',
     verses: ['verse 1', 'verse 2'],
     icon: Moon,
-    textColor: 'text-blue-500',
-    bgColor: 'bg-blue-100',
+    date: 'June 6, 2025',
+    color: 'blue',
   },
   {
     topic: 'sample prayer topic',
     prayer_point: 'sample prayer point',
     verses: ['verse 1', 'verse 2'],
     icon: BookOpen,
-    textColor: 'text-purple-500',
-    bgColor: 'bg-purple-100',
+    date: 'June 6, 2025',
+    color: 'purple',
   },
 ]
 </script>
@@ -55,11 +55,16 @@ const prayers = [
     <Card
       v-for="prayer in prayers"
       :key="prayer.topic"
-      class="hover:shadow-2xl cursor-pointer transition delay-100 duration-300 ease-in-out"
+      class="hover:shadow-2xl transition delay-100 duration-300 ease-in-out"
     >
       <CardHeader class="flex flex-col items-center justify-center">
-        <div :class="['w-15 h-15 rounded-4xl flex items-center justify-center', prayer.bgColor]">
-          <component :is="prayer.icon" :class="prayer.textColor"></component>
+        <div
+          :class="[
+            'w-15 h-15 rounded-4xl flex items-center justify-center',
+            `bg-${prayer.color}-100`,
+          ]"
+        >
+          <component :is="prayer.icon" :class="[`text-${prayer.color}-500`]"></component>
         </div>
         <CardTitle class="">{{ prayer.topic }}</CardTitle>
       </CardHeader>
@@ -69,7 +74,14 @@ const prayers = [
         </p>
         <Separator />
       </CardContent>
-      <CardFooter class="text-gray-600">{{ prayer.verses.join('; ') }}</CardFooter>
+      <CardFooter class="text-gray-600 flex justify-between">
+        <p>
+          {{ prayer.verses.join('; ') }}
+        </p>
+        <p>
+          {{ prayer.date }}
+        </p>
+      </CardFooter>
     </Card>
   </div>
 </template>
