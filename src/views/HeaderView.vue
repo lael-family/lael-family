@@ -104,9 +104,12 @@ const sublinks: { title: string; href: string; description: string }[] = [
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem v-for="item in nav_items" :key="item.title">
-          <RouterLink :to="item.href" :class="navigationMenuTriggerStyle()">{{
-            item.title
-          }}</RouterLink>
+          <RouterLink
+            active-class="underline underline-offset-8"
+            :to="item.href"
+            :class="navigationMenuTriggerStyle()"
+            >{{ item.title }}</RouterLink
+          >
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
