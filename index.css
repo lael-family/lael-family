@@ -1,0 +1,73 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Body & Theme */
+body {
+  background-color: #121212;
+  color: #f8f8f2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #44475a;
+  color: #f8f8f2;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Site list */
+#site-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Site card */
+.site-card {
+  background-color: #44475a;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 128px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+body .site-card {
+  background-color: #282a36;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.site-card:hover {
+  transform: translateY(-3px);
+}
+
+.site-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-card a {
+  text-decoration: none;
+  color: #ffb86c;
+  font-weight: bold;
+}
+
+body .site-card a {
+  color: #ffb86c;
+}
+
+p {
+  font-size: 10pt;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

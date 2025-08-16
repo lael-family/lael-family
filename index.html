@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./index.css">
+  <title>Lael Family</title>
+
+  <!-- Favicons -->
+  <link rel=" apple-touch-icon" sizes="180x180"
+    href="https://archives.laelfamily.org/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://archives.laelfamily.org/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://archives.laelfamily.org/images/favicon/favicon-16x16.png">
+</head>
+
+<body>
+  <header>
+    <h1>Lael Family</h1>
+  </header>
+  <main id="site-list">
+  </main>
+
+  <script src="./index.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+
+</html>

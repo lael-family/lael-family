@@ -1,0 +1,22 @@
+{
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "name": "Lael Family",
+  "short_name": "Lael Family",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a74da",
+  "icons": [
+    {
+      "src": "https://archives.laelfamily.org/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://archives.laelfamily.org/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
